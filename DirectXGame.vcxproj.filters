@@ -13,58 +13,130 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="ヘッダー ファイル\ksys_prototype">
-      <UniqueIdentifier>{7ebf4226-7423-4059-943d-cf2a6905dbfc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\ksys_prototype\MathUnit">
-      <UniqueIdentifier>{d0cbdeeb-4dc0-44cd-869d-b96d9cbbece3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="imgui">
       <UniqueIdentifier>{85249e34-772f-4a17-bbe3-6cc714dc2f91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\kEngine">
+      <UniqueIdentifier>{9be101dc-0334-4cce-889c-6c686d556044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\kEngine\tool">
+      <UniqueIdentifier>{b3f5dee4-cd6a-4811-aae0-51ac380ab53d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\kEngine\tool\mathsUnit">
+      <UniqueIdentifier>{29a6c1c5-6ab0-4593-be9f-b711c650a2cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\kEngine\tool\StageManager">
+      <UniqueIdentifier>{dfcf36a5-9933-4a30-a395-fbc208f0eda8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\kEngine\core">
+      <UniqueIdentifier>{8c326b72-6cc2-41f1-8ec4-dfbbd117ce54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\kEngine\core\driver">
+      <UniqueIdentifier>{5caaa8ba-08a9-49e8-a5b0-55efb8e6789f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\kEngine\core\Input">
+      <UniqueIdentifier>{89b6680d-aefd-47dd-aa36-1800658b1b11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\kEngine\core\pso">
+      <UniqueIdentifier>{f3508acb-40bf-43c7-93f2-aa1a17b3e3fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\kEngine\DrawEngine">
+      <UniqueIdentifier>{f5f0ade5-3ec7-411e-8403-91792796663e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\kEngine\DrawEngine\ResourceManager">
+      <UniqueIdentifier>{7498b527-fa66-4124-8b5a-93c531d63688}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\kEngine\DrawEngine\ResourceManager\ObjectResource">
+      <UniqueIdentifier>{18208b75-d299-4f10-9139-f2d9007eb4ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\kEngine\DrawEngine\DrawData">
+      <UniqueIdentifier>{7f7c3545-1c26-4e64-9fee-0ebee7f58f80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\kEngine\DrawEngine\InstanceManager">
+      <UniqueIdentifier>{0bfba050-6a9e-479b-a60f-00bdfaf12606}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\kEngine\Lighting">
+      <UniqueIdentifier>{3a0c0cbe-df6f-41b0-a0c2-d54b646e71a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\kEngine\material">
+      <UniqueIdentifier>{5519dc4e-41ce-4c6a-ad8f-8b34f9cc63c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\kEngine\Sound">
+      <UniqueIdentifier>{a0b0bb0a-1b71-4d75-956e-037322fbed53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\kEngine">
+      <UniqueIdentifier>{ef0fc76f-4ae7-42d6-b9be-3edbb4d31b57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\kEngine\tool">
+      <UniqueIdentifier>{cc8f6001-c61b-4d66-ba77-038d2a25b337}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\kEngine\tool\mathsUnit">
+      <UniqueIdentifier>{d0cbdeeb-4dc0-44cd-869d-b96d9cbbece3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\kEngine\tool\StageManager">
+      <UniqueIdentifier>{9fca9167-013d-4a4f-bd27-f5f5c1856df2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\kEngine\material">
+      <UniqueIdentifier>{a2043b59-5c6e-4708-979c-2243a607d6da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\kEngine\Lighting">
+      <UniqueIdentifier>{0bba1cf5-1a32-40ca-a156-05791f152c2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\kEngine\DrawEngine">
+      <UniqueIdentifier>{fe6b4033-c804-4a7c-b299-c02b57cae554}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\kEngine\DrawEngine\InstanceManager">
+      <UniqueIdentifier>{5c8f8443-dc0d-4473-8d52-852a84eaada2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\kEngine\DrawEngine\DrawData">
+      <UniqueIdentifier>{50383e7d-4fe9-4a54-ae15-7363410d6412}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\kEngine\DrawEngine\ResourceManager">
+      <UniqueIdentifier>{f5a8ea42-56e4-4517-8443-205267dd3b2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\kEngine\DrawEngine\ResourceManager\ObjectResource">
+      <UniqueIdentifier>{d4d661d6-ff3a-4494-bdcd-33e77162a5ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\kEngine\core">
+      <UniqueIdentifier>{49e68e62-2275-4787-9b20-f7117c435599}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\kEngine\core\driver">
+      <UniqueIdentifier>{d60c9300-8209-475e-a5cf-af691f196ead}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\kEngine\core\Input">
+      <UniqueIdentifier>{e6d4151c-a377-4a6d-b7b7-200d1e8e0fa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\kEngine\core\pso">
+      <UniqueIdentifier>{9839f65d-eae4-4458-9344-39f7f40927d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\kEngine\Sound">
+      <UniqueIdentifier>{f7a59acd-ca10-420e-9724-9a5f2141e9f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\New">
+      <UniqueIdentifier>{8648b78d-3a7a-44b7-957d-7ed2e1d77cf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\New">
+      <UniqueIdentifier>{12d97853-4318-434e-9811-5b183537b7df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Effect">
+      <UniqueIdentifier>{2c4cc008-cf1b-40de-a895-f5c2f012227b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Effect">
+      <UniqueIdentifier>{7d8bc408-2b78-43ea-8f62-b2421ae4ed44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Shader">
+      <UniqueIdentifier>{7401b172-ae10-4ad9-89bb-0279e09e4e74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Shader">
+      <UniqueIdentifier>{593ae479-0340-4cae-b587-3c305d4db232}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Map">
+      <UniqueIdentifier>{49131cbd-9e04-46e9-ab0b-c43f35dd7b9f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>ヘッダー ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\core\driver\DircetXBase.cpp">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\Shader\shader_compile.cpp">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\core\pso\PSO.cpp">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\core\driver\DircetXCommen.cpp">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\kEngine.cpp">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\drawEngine\drawEngine.cpp">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\drawEngine\ResourceManager\VertexResource.cpp">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\tool\mathsUnit\Vector2.cpp">
-      <Filter>ヘッダー ファイル\ksys_prototype\MathUnit</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\tool\mathsUnit\Vector3.cpp">
-      <Filter>ヘッダー ファイル\ksys_prototype\MathUnit</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\tool\mathsUnit\Matrix3x3.cpp">
-      <Filter>ヘッダー ファイル\ksys_prototype\MathUnit</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\tool\mathsUnit\Matrix4x4.cpp">
-      <Filter>ヘッダー ファイル\ksys_prototype\MathUnit</Filter>
-    </ClCompile>
-    <ClCompile Include="ConvertString.cpp">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\tool\mathsUnit\Transform.cpp">
-      <Filter>ヘッダー ファイル\ksys_prototype\MathUnit</Filter>
     </ClCompile>
     <ClCompile Include="externals\imgui\imgui.cpp">
       <Filter>imgui</Filter>
@@ -87,166 +159,181 @@
     <ClCompile Include="externals\imgui\imgui_widgets.cpp">
       <Filter>imgui</Filter>
     </ClCompile>
-    <ClCompile Include="kEngine\drawEngine\ResourceManager\VertexData.cpp">
-      <Filter>ヘッダー ファイル\ksys_prototype\MathUnit</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\tool\mathsUnit\TransformationMatrix.cpp">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\material\Material.cpp">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\Lighting\DirectionalLight.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\drawEngine\ResourceManager\ResourceManager.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\drawEngine\ResourceManager\BasicResource.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\tool\StageManager\SceneManager.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\tool\StageManager\Scene.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\tool\StageManager\SceneTester.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\tool\mathsUnit\randomMaker.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Effect\PerlinNoise.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Sprite2D.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\core\driver\config.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Triangle.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Sphere.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Cube.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Model.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\core\Input\inputManager.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\Sound\soundUnit.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\Sound\soundManager.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\tool\DebugCamera\DebugCamera.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\Lighting\LightModelType.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\material\MaterialConfig.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\ModelGroup.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\tool\TimeManager\TimeManager.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="New\Scene\scene1.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="New\Actor\Actor.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="New\Collision\Collision.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="New\CSVLoader\CsvLoader.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="New\FallingBlock\FallingBlock.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="New\Map\Map.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="New\Player\Player.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="New\ShadowArea\ShadowArea.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\tool\StageManager\Stage.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="kEngine\drawEngine\DrawData\SpriteData.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Particle.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\kEngine\DrawEngine\DrawData</Filter>
     </ClCompile>
     <ClCompile Include="kEngine\drawEngine\InstanceManager\InstanceManager.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\kEngine\DrawEngine\InstanceManager</Filter>
     </ClCompile>
-    <ClCompile Include="kEngine\tool\mathsUnit\MathsIncluder.cpp">
-      <Filter>ソース ファイル</Filter>
+    <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Cube.cpp">
+      <Filter>ソース ファイル\kEngine\DrawEngine\ResourceManager\ObjectResource</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Model.cpp">
+      <Filter>ソース ファイル\kEngine\DrawEngine\ResourceManager\ObjectResource</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\ModelGroup.cpp">
+      <Filter>ソース ファイル\kEngine\DrawEngine\ResourceManager\ObjectResource</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Particle.cpp">
+      <Filter>ソース ファイル\kEngine\DrawEngine\ResourceManager\ObjectResource</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Sphere.cpp">
+      <Filter>ソース ファイル\kEngine\DrawEngine\ResourceManager\ObjectResource</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Sprite2D.cpp">
+      <Filter>ソース ファイル\kEngine\DrawEngine\ResourceManager\ObjectResource</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Triangle.cpp">
+      <Filter>ソース ファイル\kEngine\DrawEngine\ResourceManager\ObjectResource</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\drawEngine\ResourceManager\BasicResource.cpp">
+      <Filter>ソース ファイル\kEngine\DrawEngine\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\drawEngine\ResourceManager\ResourceManager.cpp">
+      <Filter>ソース ファイル\kEngine\DrawEngine\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\drawEngine\ResourceManager\VertexResource.cpp">
+      <Filter>ソース ファイル\kEngine\DrawEngine\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\drawEngine\ResourceManager\VertexData.cpp">
+      <Filter>ソース ファイル\kEngine\DrawEngine\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\drawEngine\drawEngine.cpp">
+      <Filter>ソース ファイル\kEngine\DrawEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\core\driver\config.cpp">
+      <Filter>ソース ファイル\kEngine\core\driver</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\core\driver\DircetXBase.cpp">
+      <Filter>ソース ファイル\kEngine\core\driver</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\core\driver\DircetXCommen.cpp">
+      <Filter>ソース ファイル\kEngine\core\driver</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\core\Input\inputManager.cpp">
+      <Filter>ソース ファイル\kEngine\core\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\core\pso\PSO.cpp">
+      <Filter>ソース ファイル\kEngine\core\pso</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\Lighting\LightModelType.cpp">
+      <Filter>ソース ファイル\kEngine\Lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\Lighting\DirectionalLight.cpp">
+      <Filter>ソース ファイル\kEngine\Lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\material\MaterialConfig.cpp">
+      <Filter>ソース ファイル\kEngine\material</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\material\Material.cpp">
+      <Filter>ソース ファイル\kEngine\material</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\Sound\soundUnit.cpp">
+      <Filter>ソース ファイル\kEngine\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\Sound\soundManager.cpp">
+      <Filter>ソース ファイル\kEngine\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\tool\DebugCamera\DebugCamera.cpp">
+      <Filter>ソース ファイル\kEngine\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\tool\mathsUnit\Matrix3x3.cpp">
+      <Filter>ソース ファイル\kEngine\tool\mathsUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\tool\mathsUnit\Matrix4x4.cpp">
+      <Filter>ソース ファイル\kEngine\tool\mathsUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\tool\mathsUnit\Transform.cpp">
+      <Filter>ソース ファイル\kEngine\tool\mathsUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\tool\mathsUnit\Vector2.cpp">
+      <Filter>ソース ファイル\kEngine\tool\mathsUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\tool\mathsUnit\Vector3.cpp">
+      <Filter>ソース ファイル\kEngine\tool\mathsUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\tool\mathsUnit\TransformationMatrix.cpp">
+      <Filter>ソース ファイル\kEngine\tool\mathsUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\tool\StageManager\Scene.cpp">
+      <Filter>ソース ファイル\kEngine\tool\StageManager</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\tool\StageManager\SceneManager.cpp">
+      <Filter>ソース ファイル\kEngine\tool\StageManager</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\tool\StageManager\SceneTester.cpp">
+      <Filter>ソース ファイル\kEngine\tool\StageManager</Filter>
     </ClCompile>
     <ClCompile Include="kEngine\tool\StageManager\StageTestForGE.cpp">
+      <Filter>ソース ファイル\kEngine\tool\StageManager</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\tool\StageManager\Stage.cpp">
+      <Filter>ソース ファイル\kEngine\tool\StageManager</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\tool\TimeManager\TimeManager.cpp">
+      <Filter>ソース ファイル\kEngine\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="New\Actor\Actor.cpp">
+      <Filter>ソース ファイル\New</Filter>
+    </ClCompile>
+    <ClCompile Include="New\Collision\Collision.cpp">
+      <Filter>ソース ファイル\New</Filter>
+    </ClCompile>
+    <ClCompile Include="New\CSVLoader\CsvLoader.cpp">
+      <Filter>ソース ファイル\New</Filter>
+    </ClCompile>
+    <ClCompile Include="New\FallingBlock\FallingBlock.cpp">
+      <Filter>ソース ファイル\New</Filter>
+    </ClCompile>
+    <ClCompile Include="New\Map\Map.cpp">
+      <Filter>ソース ファイル\New</Filter>
+    </ClCompile>
+    <ClCompile Include="New\Player\Player.cpp">
+      <Filter>ソース ファイル\New</Filter>
+    </ClCompile>
+    <ClCompile Include="New\Scene\scene1.cpp">
+      <Filter>ソース ファイル\New</Filter>
+    </ClCompile>
+    <ClCompile Include="New\ShadowArea\ShadowArea.cpp">
+      <Filter>ソース ファイル\New</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\kEngine.cpp">
+      <Filter>ソース ファイル\kEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Effect\PerlinNoise.cpp">
+      <Filter>ソース ファイル\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\tool\mathsUnit\MathsIncluder.cpp">
+      <Filter>ソース ファイル\kEngine\tool\mathsUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="kEngine\tool\mathsUnit\randomMaker.cpp">
+      <Filter>ソース ファイル\kEngine\tool\mathsUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvertString.cpp">
       <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="resources\Shader\shader_compile.cpp">
+      <Filter>ソース ファイル\Shader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="kEngine\core\driver\DircetXBase.h">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\Shader\shader_compile.h">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\core\pso\PSO.h">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\core\driver\DircetXCommen.h">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\kEngine.h">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\drawEngine\drawEngine.h">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\drawEngine\ResourceManager\VertexResource.h">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
-    </ClInclude>
     <ClInclude Include="kEngine\tool\mathsUnit\Vector2.h">
-      <Filter>ヘッダー ファイル\ksys_prototype\MathUnit</Filter>
+      <Filter>ヘッダー ファイル\kEngine\tool\mathsUnit</Filter>
     </ClInclude>
     <ClInclude Include="kEngine\tool\mathsUnit\Vector4.h">
-      <Filter>ヘッダー ファイル\ksys_prototype\MathUnit</Filter>
+      <Filter>ヘッダー ファイル\kEngine\tool\mathsUnit</Filter>
     </ClInclude>
     <ClInclude Include="kEngine\tool\mathsUnit\Vector3.h">
-      <Filter>ヘッダー ファイル\ksys_prototype\MathUnit</Filter>
+      <Filter>ヘッダー ファイル\kEngine\tool\mathsUnit</Filter>
     </ClInclude>
     <ClInclude Include="kEngine\tool\mathsUnit\Matrix3x3.h">
-      <Filter>ヘッダー ファイル\ksys_prototype\MathUnit</Filter>
-    </ClInclude>
-    <ClInclude Include="ConvertString.h">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
+      <Filter>ヘッダー ファイル\kEngine\tool\mathsUnit</Filter>
     </ClInclude>
     <ClInclude Include="kEngine\tool\mathsUnit\Matrix4x4.h">
-      <Filter>ヘッダー ファイル\ksys_prototype\MathUnit</Filter>
+      <Filter>ヘッダー ファイル\kEngine\tool\mathsUnit</Filter>
     </ClInclude>
     <ClInclude Include="kEngine\tool\mathsUnit\Transform.h">
-      <Filter>ヘッダー ファイル\ksys_prototype\MathUnit</Filter>
+      <Filter>ヘッダー ファイル\kEngine\tool\mathsUnit</Filter>
     </ClInclude>
     <ClInclude Include="externals\imgui\imconfig.h">
       <Filter>imgui</Filter>
@@ -272,145 +359,173 @@
     <ClInclude Include="externals\imgui\imstb_truetype.h">
       <Filter>imgui</Filter>
     </ClInclude>
-    <ClInclude Include="kEngine\drawEngine\ResourceManager\VertexData.h">
-      <Filter>ヘッダー ファイル\ksys_prototype\MathUnit</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\material\Material.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\tool\mathsUnit\TransformationMatrix.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\Lighting\DirectionalLight.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\drawEngine\ResourceManager\ResourceManager.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\drawEngine\ResourceManager\BasicResource.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\tool\StageManager\SceneManager.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\tool\StageManager\Scene.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\tool\StageManager\SceneTester.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\tool\mathsUnit\randomMaker.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Effect\PerlinNoise.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Sprite2D.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\VertexIndex.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\core\driver\config.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Triangle.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Sphere.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Cube.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Model.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\core\Input\inputManager.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\Sound\soundUnit.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\Sound\soundManager.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\tool\DebugCamera\DebugCamera.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\Lighting\LightModelType.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\material\MaterialConfig.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\ModelGroup.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\tool\TimeManager\TimeManager.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="New\Scene\scene1.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="New\Actor\Actor.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="New\Collision\Collision.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="New\CSVLoader\CsvLoader.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="New\FallingBlock\FallingBlock.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="New\Map\Map.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="New\Player\Player.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="New\ShadowArea\ShadowArea.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="New\Utility\Rect.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="New\Utility\ShadowDirection.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="New\Utility\Vector2Int.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\tool\StageManager\Stage.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="kEngine\drawEngine\DrawData\SpriteData.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Particle.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\kEngine\DrawEngine\DrawData</Filter>
     </ClInclude>
     <ClInclude Include="kEngine\drawEngine\InstanceManager\InstanceManager.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\kEngine\DrawEngine\InstanceManager</Filter>
     </ClInclude>
-    <ClInclude Include="kEngine\tool\mathsUnit\MathsIncluder.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Cube.h">
+      <Filter>ヘッダー ファイル\kEngine\DrawEngine\ResourceManager\ObjectResource</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Model.h">
+      <Filter>ヘッダー ファイル\kEngine\DrawEngine\ResourceManager\ObjectResource</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\ModelGroup.h">
+      <Filter>ヘッダー ファイル\kEngine\DrawEngine\ResourceManager\ObjectResource</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Particle.h">
+      <Filter>ヘッダー ファイル\kEngine\DrawEngine\ResourceManager\ObjectResource</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Sphere.h">
+      <Filter>ヘッダー ファイル\kEngine\DrawEngine\ResourceManager\ObjectResource</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Sprite2D.h">
+      <Filter>ヘッダー ファイル\kEngine\DrawEngine\ResourceManager\ObjectResource</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Triangle.h">
+      <Filter>ヘッダー ファイル\kEngine\DrawEngine\ResourceManager\ObjectResource</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\VertexIndex.h">
+      <Filter>ヘッダー ファイル\kEngine\DrawEngine\ResourceManager\ObjectResource</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\drawEngine\ResourceManager\BasicResource.h">
+      <Filter>ヘッダー ファイル\kEngine\DrawEngine\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\drawEngine\ResourceManager\ResourceManager.h">
+      <Filter>ヘッダー ファイル\kEngine\DrawEngine\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\drawEngine\ResourceManager\VertexResource.h">
+      <Filter>ヘッダー ファイル\kEngine\DrawEngine\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\drawEngine\ResourceManager\VertexData.h">
+      <Filter>ヘッダー ファイル\kEngine\DrawEngine\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\drawEngine\drawEngine.h">
+      <Filter>ヘッダー ファイル\kEngine\DrawEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\core\Input\inputManager.h">
+      <Filter>ヘッダー ファイル\kEngine\core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\core\driver\DircetXBase.h">
+      <Filter>ヘッダー ファイル\kEngine\core\driver</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\core\driver\DircetXCommen.h">
+      <Filter>ヘッダー ファイル\kEngine\core\driver</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\core\driver\config.h">
+      <Filter>ヘッダー ファイル\kEngine\core\driver</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\core\pso\PSO.h">
+      <Filter>ヘッダー ファイル\kEngine\core\pso</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\Lighting\DirectionalLight.h">
+      <Filter>ヘッダー ファイル\kEngine\Lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\Lighting\LightModelType.h">
+      <Filter>ヘッダー ファイル\kEngine\Lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\material\Material.h">
+      <Filter>ヘッダー ファイル\kEngine\material</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\material\MaterialConfig.h">
+      <Filter>ヘッダー ファイル\kEngine\material</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\Sound\soundManager.h">
+      <Filter>ヘッダー ファイル\kEngine\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\Sound\soundUnit.h">
+      <Filter>ヘッダー ファイル\kEngine\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\tool\DebugCamera\DebugCamera.h">
+      <Filter>ヘッダー ファイル\kEngine\tool</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\tool\StageManager\Stage.h">
+      <Filter>ヘッダー ファイル\kEngine\tool\StageManager</Filter>
     </ClInclude>
     <ClInclude Include="kEngine\tool\StageManager\StageTestForGE.h">
+      <Filter>ヘッダー ファイル\kEngine\tool\StageManager</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\tool\StageManager\SceneTester.h">
+      <Filter>ヘッダー ファイル\kEngine\tool\StageManager</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\tool\StageManager\SceneManager.h">
+      <Filter>ヘッダー ファイル\kEngine\tool\StageManager</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\tool\StageManager\Scene.h">
+      <Filter>ヘッダー ファイル\kEngine\tool\StageManager</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\tool\TimeManager\TimeManager.h">
+      <Filter>ヘッダー ファイル\kEngine\tool</Filter>
+    </ClInclude>
+    <ClInclude Include="New\Actor\Actor.h">
+      <Filter>ヘッダー ファイル\New</Filter>
+    </ClInclude>
+    <ClInclude Include="New\Collision\Collision.h">
+      <Filter>ヘッダー ファイル\New</Filter>
+    </ClInclude>
+    <ClInclude Include="New\CSVLoader\CsvLoader.h">
+      <Filter>ヘッダー ファイル\New</Filter>
+    </ClInclude>
+    <ClInclude Include="New\FallingBlock\FallingBlock.h">
+      <Filter>ヘッダー ファイル\New</Filter>
+    </ClInclude>
+    <ClInclude Include="New\Map\Map.h">
+      <Filter>ヘッダー ファイル\New</Filter>
+    </ClInclude>
+    <ClInclude Include="New\Player\Player.h">
+      <Filter>ヘッダー ファイル\New</Filter>
+    </ClInclude>
+    <ClInclude Include="New\Scene\scene1.h">
+      <Filter>ヘッダー ファイル\New</Filter>
+    </ClInclude>
+    <ClInclude Include="New\ShadowArea\ShadowArea.h">
+      <Filter>ヘッダー ファイル\New</Filter>
+    </ClInclude>
+    <ClInclude Include="New\Utility\ShadowDirection.h">
+      <Filter>ヘッダー ファイル\New</Filter>
+    </ClInclude>
+    <ClInclude Include="New\Utility\Rect.h">
+      <Filter>ヘッダー ファイル\New</Filter>
+    </ClInclude>
+    <ClInclude Include="New\Utility\Vector2Int.h">
+      <Filter>ヘッダー ファイル\New</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\kEngine.h">
+      <Filter>ヘッダー ファイル\kEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Effect\PerlinNoise.h">
+      <Filter>ヘッダー ファイル\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\tool\mathsUnit\MathsIncluder.h">
+      <Filter>ヘッダー ファイル\kEngine\tool\mathsUnit</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\tool\mathsUnit\randomMaker.h">
+      <Filter>ヘッダー ファイル\kEngine\tool\mathsUnit</Filter>
+    </ClInclude>
+    <ClInclude Include="kEngine\tool\mathsUnit\TransformationMatrix.h">
+      <Filter>ヘッダー ファイル\kEngine\tool\mathsUnit</Filter>
+    </ClInclude>
+    <ClInclude Include="ConvertString.h">
       <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="resources\Shader\shader_compile.h">
+      <Filter>ヘッダー ファイル\Shader</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="kEngine\Shader\Object3d.PS.hlsl">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
+    <FxCompile Include="resources\Shader\LightingLambert\HalfLambert.hlsl">
+      <Filter>リソース ファイル</Filter>
     </FxCompile>
-    <FxCompile Include="kEngine\Shader\Object3d.VS.hlsl">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
+    <FxCompile Include="resources\Shader\LightingLambert\Lambert.hlsl">
+      <Filter>リソース ファイル</Filter>
     </FxCompile>
-    <FxCompile Include="kEngine\Shader\LightingLambert\Lambert.hlsl" />
-    <FxCompile Include="kEngine\Shader\LightingLambert\HalfLambert.hlsl" />
+    <FxCompile Include="resources\Shader\Object3d.PS.hlsl">
+      <Filter>リソース ファイル</Filter>
+    </FxCompile>
+    <FxCompile Include="resources\Shader\Object3d.VS.hlsl">
+      <Filter>リソース ファイル</Filter>
+    </FxCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="externals\imgui\LICENSE.txt">
@@ -418,13 +533,21 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <None Include="kEngine\Shader\Object3d.hlsli">
-      <Filter>ヘッダー ファイル\ksys_prototype</Filter>
-    </None>
     <None Include="packages.config" />
-    <None Include="resources\map\map.csv" />
-    <None Include="resources\map\map1.csv" />
-    <None Include="resources\map\map2.csv" />
-    <None Include="resources\map\map3.csv" />
+    <None Include="resources\Shader\Object3d.hlsli">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="resources\map\map.csv">
+      <Filter>リソース ファイル\Map</Filter>
+    </None>
+    <None Include="resources\map\map1.csv">
+      <Filter>リソース ファイル\Map</Filter>
+    </None>
+    <None Include="resources\map\map2.csv">
+      <Filter>リソース ファイル\Map</Filter>
+    </None>
+    <None Include="resources\map\map3.csv">
+      <Filter>リソース ファイル\Map</Filter>
+    </None>
   </ItemGroup>
 </Project>
