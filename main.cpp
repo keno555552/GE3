@@ -55,7 +55,6 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 		system->EndFrame();
 
-
 		///// 終了条件
 
 		if (system->GetTriggerOn(DIK_ESCAPE) ||
