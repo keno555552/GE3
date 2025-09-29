@@ -5,8 +5,7 @@
 #include "DirectionalLight.h"
 #include <string>
 #include <vector>
-
-#include "tool/StageManager/SceneManager.h"
+#include "SceneManager.h"
 
 const char kWindowTitle[] = "ENGINE";
 
@@ -39,9 +38,6 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		} else {
 			// ゲームの処理で固定サイズ整数型を使用
 			int32_t score = 0;   // 32ビット幅の符号付き整数
-
-
-			///====================入力処理====================///
 
 			///====================ゲーム処理====================///
 

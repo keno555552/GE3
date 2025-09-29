@@ -300,7 +300,7 @@
     <ClCompile Include="kEngine\kEngine.cpp">
       <Filter>ソース ファイル\kEngine</Filter>
     </ClCompile>
-    <ClCompile Include="Effect\PerlinNoise.cpp">
+    <ClCompile Include="kEngine\tool\PerlinNoise\PerlinNoise.cpp">
       <Filter>ソース ファイル\Effect</Filter>
     </ClCompile>
     <ClCompile Include="kEngine\tool\mathsUnit\MathsIncluder.cpp">
@@ -494,7 +494,7 @@
     <ClInclude Include="kEngine\kEngine.h">
       <Filter>ヘッダー ファイル\kEngine</Filter>
     </ClInclude>
-    <ClInclude Include="Effect\PerlinNoise.h">
+    <ClInclude Include="kEngine\tool\PerlinNoise\PerlinNoise.h">
       <Filter>ヘッダー ファイル\Effect</Filter>
     </ClInclude>
     <ClInclude Include="kEngine\tool\mathsUnit\MathsIncluder.h">
