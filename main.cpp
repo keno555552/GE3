@@ -41,9 +41,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			int32_t score = 0;   // 32ビット幅の符号付き整数
 		}
 
-
 		///====================入力処理====================///
-
+		
 		///====================ゲーム処理====================///
 
 		sceneManager->Update();
