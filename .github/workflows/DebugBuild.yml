@@ -6,14 +6,14 @@ on:
 
 env:
  #リポジトリのルートディレクロリを基点としたソリューションファイルのパス
- SOLUTION_FILE_PATH: project/DirectXGame.sln
+ SOLUTION_FILE_PATH: Engine/DirectXGame.sln
  #Visual Studio の構成(Debug/Release)
  CONFIGURAION: Debug
 
 jobs:
  build:
   runs-on: windows-2022
-
+  
   steps:
    - name: Checkout
      uses: actions/checkout@v4
