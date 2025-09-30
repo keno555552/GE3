@@ -1,4 +1,11 @@
-#  **操作方法:**  
-|GE_master|CG_master|
+# kEngine
+
+### Master
+|Debug|Release|
 |:---|:---|
-| [![DebugBuild](https://github.com/keno555552/kEngine/actions/workflows/DebugBuild.yml/badge.svg?branch=GE_master)](https://github.com/keno555552/kEngine/actions/workflows/DebugBuild.yml) ||
+|||
+
+||GE_master|CG_master|
+|:---|:---|:---|
+|Debug|[![DebugBuild](https://github.com/keno555552/kEngine/actions/workflows/DebugBuild.yml/badge.svg?branch=GE_master)](https://github.com/keno555552/kEngine/actions/workflows/DebugBuild.yml) ||
+|Release|||
