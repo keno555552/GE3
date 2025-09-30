@@ -3,6 +3,7 @@ on:
  push:
   branches:
    - GE_master
+   - CG_master
 
 env:
  #リポジトリのルートディレクロリを基点としたソリューションファイルのパス
