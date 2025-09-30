@@ -6,7 +6,7 @@ on:
 
 env:
  #リポジトリのルートディレクロリを基点としたソリューションファイルのパス
- SOLUTION_FILE_PATH: Engine/DirectXGame.sln
+ SOLUTION_FILE_PATH: DirectXGame.sln
  #Visual Studio の構成(Debug/Release)
  CONFIGURAION: Debug
 
