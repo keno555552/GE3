@@ -147,7 +147,7 @@ void DrawEngine::DrawSpriteDirect(Vector2 pos, MaterialConfig material) {
 	int materialHandle = readCommonTextureHandle(material.textureHandle);
 	textureSrvHandleGPU_ = directXDriver_->GetGPUDescriptorHandle(directXDriver_->GetSrvDescriptorHeap(), directXDriver_->GetDesriptorSizeSRV(), materialHandle);
 	directXDriver_->GetCommandList()->SetGraphicsRootDescriptorTable(2, textureSrvHandleGPU_);
-	/// Spriteの描画。変更が必要なものだけ変更する
+	/// Spriteの描画。変更が必要なものだけ変更する9652.
 	D3D12_VERTEX_BUFFER_VIEW VertexBufferView = resourceManager_->vertexResourceSpriteGroup_[0]->GetVertexBufferView();
 	directXDriver_->GetCommandList()->IASetVertexBuffers(0, 1, &VertexBufferView);
 	/// IBVを設定

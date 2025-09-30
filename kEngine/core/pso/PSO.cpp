@@ -160,11 +160,11 @@ void PSO::ShaderCompile(IDxcUtils* dxcUtils, IDxcCompiler3* dxcCompiler, IDxcInc
 {
     /// Shaderをコンパイルする
     vertexShaderBlob_ = {};
-    vertexShaderBlob_ = CompileShader(L"./kEngine/Shader/Object3d.VS.hlsl", L"vs_6_0", dxcUtils, dxcCompiler, includeHandler);
+    vertexShaderBlob_ = CompileShader(L"./resources/Shader/Object3d.VS.hlsl", L"vs_6_0", dxcUtils, dxcCompiler, includeHandler);
     assert(vertexShaderBlob_ != nullptr);
 
     pixelShaderBlob_ = {};
-    pixelShaderBlob_ = CompileShader(L"./kEngine/Shader/Object3d.PS.hlsl", L"ps_6_0", dxcUtils, dxcCompiler, includeHandler, lightModelType);
+    pixelShaderBlob_ = CompileShader(L"./resources/Shader/Object3d.PS.hlsl", L"ps_6_0", dxcUtils, dxcCompiler, includeHandler, lightModelType);
     assert(pixelShaderBlob_ != nullptr);
 }
 
