@@ -2,7 +2,7 @@ name: DebugBuild
 on:
  push:
   branches:
-   -GE_master
+   - GE_master
 
 env:
  #リポジトリのルートディレクロリを基点としたソリューションファイルのパス
