@@ -54,8 +54,6 @@ ResourceManager::~ResourceManager() {
 		materialResourceModelGroup_.clear();
 
 		for (auto& modelGroup : vertexResourceModelGroup_) {
-			//for (int model = 0; model < modelGroup->GetModelNum(); model++) {
-			//}
 			if (modelGroup) {
 				delete modelGroup;
 				modelGroup = nullptr;

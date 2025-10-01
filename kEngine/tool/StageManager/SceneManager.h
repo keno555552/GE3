@@ -1,9 +1,9 @@
 #pragma once
 #include "Scene.h"
 #include "SceneTester.h"
-#include "StageTestForGE.h"
+#include "SceneTestForGE.h"
 #include "MaterialConfig.h"
-#include "Stage.h"
+#include "Scene1.h"
 
 class SceneManager
 {

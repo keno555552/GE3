@@ -3,11 +3,11 @@
 #include "MathsIncluder.h"
 #include "config.h"
 
-class StageTestForGE :public Scene
+class SceneTestForGE :public Scene
 {
 public:
-	StageTestForGE(kEngine* system);
-	~StageTestForGE();
+	SceneTestForGE(kEngine* system);
+	~SceneTestForGE();
 	void Update() override;
 	void Draw() override;
 

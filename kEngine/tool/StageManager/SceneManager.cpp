@@ -35,7 +35,7 @@ void SceneManager::SceneChanger() {
 		case SceneNum::TITLE:
 			break;
 		case SceneNum::STAGE:
-			sceneUsing_ = new Stage(system_);
+			sceneUsing_ = new Scene1(system_);
 			break;
 		case SceneNum::WIN:
 			break;

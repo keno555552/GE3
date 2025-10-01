@@ -298,10 +298,10 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClCompile Include="kEngine\drawEngine\ResourceManager\VertexResource.cpp" />
     <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Triangle.cpp" />
     <ClCompile Include="kEngine\tool\TimeManager\TimeManager.cpp" />
-    <ClCompile Include="scenes\Stage.cpp" />
+    <ClCompile Include="scenes\Scene1.cpp" />
     <ClCompile Include="kEngine\drawEngine\DrawData\SpriteData.cpp" />
     <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Particle.cpp" />
-    <ClCompile Include="scenes\StageTestForGE.cpp" />
+    <ClCompile Include="scenes\SceneTestForGE.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kEngine\drawEngine\InstanceManager\InstanceManager.h" />
@@ -355,10 +355,10 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClInclude Include="kEngine\drawEngine\ResourceManager\VertexResource.h" />
     <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Triangle.h" />
     <ClInclude Include="kEngine\tool\TimeManager\TimeManager.h" />
-    <ClInclude Include="scenes\Stage.h" />
+    <ClInclude Include="scenes\Scene1.h" />
     <ClInclude Include="kEngine\drawEngine\DrawData\SpriteData.h" />
     <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Particle.h" />
-    <ClInclude Include="scenes\StageTestForGE.h" />
+    <ClInclude Include="scenes\SceneTestForGE.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="resources\Shader\LightingLambert\HalfLambert.hlsl">

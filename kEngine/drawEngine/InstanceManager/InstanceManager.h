@@ -20,6 +20,7 @@ public:
 		Vector4 uvOffset;
 		int layer;
 	};
+
 	struct ModelInstance {
 		Vector2 postion;
 		Vector2 rotation;

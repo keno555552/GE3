@@ -4,10 +4,10 @@
 #include <memory>
 #include <vector>
 
-class Stage : public Scene {
+class Scene1 : public Scene {
 public:
-	Stage(kEngine* system);
-	~Stage();
+	Scene1(kEngine* system);
+	~Scene1();
 
 	void Update() override;
 	void Draw() override;
