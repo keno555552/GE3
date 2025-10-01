@@ -57,7 +57,7 @@ void VertexResource::ClearAllResource() {
 }
 
 void VertexResource::ClearVertexResource() {
-	if(vertexResource_)vertexResource_->ClearResource();
+	if (vertexResource_)vertexResource_->ClearResource();
 }
 
 void VertexResource::ClearIndexResource() {

@@ -4,6 +4,9 @@ on:
   branches:
    - GE_master
    - CG_master
+   - AL_master
+   - AL3_02_master
+   - master
 
 env:
  #リポジトリのルートディレクロリを基点としたソリューションファイルのパス
