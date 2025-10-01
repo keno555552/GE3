@@ -300,6 +300,7 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClCompile Include="scenes\Stage.cpp" />
     <ClCompile Include="kEngine\drawEngine\DrawData\SpriteData.cpp" />
     <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Particle.cpp" />
+    <ClCompile Include="scenes\StageAL3_02.cpp" />
     <ClCompile Include="scenes\StageTestForGE.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -356,6 +357,7 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClInclude Include="scenes\Stage.h" />
     <ClInclude Include="kEngine\drawEngine\DrawData\SpriteData.h" />
     <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Particle.h" />
+    <ClInclude Include="scenes\StageAL3_02.h" />
     <ClInclude Include="scenes\StageTestForGE.h" />
   </ItemGroup>
   <ItemGroup>
