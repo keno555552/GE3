@@ -38,19 +38,19 @@ bool CheakXInputDeviceConnected() {
 	XINPUT_STATE state;
 	ZeroMemory(&state, sizeof(XINPUT_STATE));
 
-	// 檢測 4 個可能的 XInput 控制器
+	// XInputのコントローラーをチェック
 	for (DWORD i = 0; i < XUSER_MAX_COUNT; i++) {
 		if (XInputGetState(i, &state) == ERROR_SUCCESS) {
 			bool boool = true;
 			config::SetGamePadType(XINPUT);
 			config::SetConnetGamePad(&boool);
 			config::SetXInputIp(i);
-			return true; // 找到 XInput 控制器
+			return true; // 見つけたtrue
 		}
 	}
 	config::SetXInputIp(-1);
 	bool boool = false;
-	return false; // 沒有 XInput 控制器
+	return false; // 見つからないならfalse
 }
 
 #pragma endregion
@@ -187,9 +187,6 @@ IDxcBlob* CompileShader(
 	);
 	// コンパイルエラーではなくdxcが起動できないなど致命的な状況
 	assert(SUCCEEDED(hr));
-
-
-
 
 	/// 3.警告・エラーがでていないか確認する
 	// 警告・エラーが出てたらログに出して止める
