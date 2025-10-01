@@ -301,6 +301,7 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClCompile Include="kEngine\drawEngine\DrawData\SpriteData.cpp" />
     <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Particle.cpp" />
     <ClCompile Include="resources\stages\StageTestForGE.cpp" />
+    <ClCompile Include="resources\stages\StageAL3_02.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kEngine\drawEngine\InstanceManager\InstanceManager.h" />
@@ -357,6 +358,7 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClInclude Include="kEngine\drawEngine\DrawData\SpriteData.h" />
     <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Particle.h" />
     <ClInclude Include="resources\stages\StageTestForGE.h" />
+    <ClInclude Include="resources\stages\StageAL3_02.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="resources\Shader\LightingLambert\HalfLambert.hlsl">
