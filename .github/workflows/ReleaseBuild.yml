@@ -4,6 +4,7 @@ on:
   branches:
    - GE_master
    - CG_master
+   - AL_master
    - master
 
 env:
