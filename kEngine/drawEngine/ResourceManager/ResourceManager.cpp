@@ -26,7 +26,7 @@ ResourceManager::ResourceManager(ID3D12Device* device) {
 
 ResourceManager::~ResourceManager() {
 	///ID3D12Resource*の解放する
-	//lightingResource_->Release();
+	//lightingResource_->Release();//前フレームクリアされるからいらない
 	vertexResourceTriangle_->ClearVertexResource();
 	if (!vertexResourceSpriteGroup_.empty()) {
 		for (auto ptr : vertexResourceSpriteGroup_) {

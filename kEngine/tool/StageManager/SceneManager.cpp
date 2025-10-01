@@ -3,7 +3,7 @@
 
 SceneManager::SceneManager(kEngine* system) {
 	system_ = system;
-	sceneUsingHandle_ = SceneNum::STAGE;
+	sceneUsingHandle_ = SceneNum::TESTER;
 
 	intMaterialConfig(&materialConfig_);
 	materialConfig_.uvTransformMatrix = MakeAffineMatrix(materialConfig_.uvScale, materialConfig_.uvRotate, materialConfig_.uvTranslate);
