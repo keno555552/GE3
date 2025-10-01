@@ -259,13 +259,6 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClCompile Include="kEngine\material\MaterialConfig.cpp" />
     <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\ModelGroup.cpp" />
     <ClCompile Include="kEngine\tool\mathsUnit\MathsIncluder.cpp" />
-    <ClCompile Include="New\Actor\Actor.cpp" />
-    <ClCompile Include="New\Collision\Collision.cpp" />
-    <ClCompile Include="New\CSVLoader\CsvLoader.cpp" />
-    <ClCompile Include="New\FallingBlock\FallingBlock.cpp" />
-    <ClCompile Include="New\Map\Map.cpp" />
-    <ClCompile Include="New\Player\Player.cpp" />
-    <ClCompile Include="New\Scene\scene1.cpp" />
     <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Sprite2D.cpp" />
     <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Sphere.cpp" />
     <ClCompile Include="kEngine\Sound\soundUnit.cpp" />
@@ -304,7 +297,6 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClCompile Include="kEngine\drawEngine\ResourceManager\VertexResource.cpp" />
     <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Triangle.cpp" />
     <ClCompile Include="kEngine\tool\TimeManager\TimeManager.cpp" />
-    <ClCompile Include="New\ShadowArea\ShadowArea.cpp" />
     <ClCompile Include="kEngine\tool\StageManager\Stage.cpp" />
     <ClCompile Include="kEngine\drawEngine\DrawData\SpriteData.cpp" />
     <ClCompile Include="kEngine\drawEngine\ResourceManager\ObjectResource\Particle.cpp" />
@@ -325,13 +317,6 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClInclude Include="kEngine\material\MaterialConfig.h" />
     <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\ModelGroup.h" />
     <ClInclude Include="kEngine\tool\mathsUnit\MathsIncluder.h" />
-    <ClInclude Include="New\Actor\Actor.h" />
-    <ClInclude Include="New\Collision\Collision.h" />
-    <ClInclude Include="New\CSVLoader\CsvLoader.h" />
-    <ClInclude Include="New\FallingBlock\FallingBlock.h" />
-    <ClInclude Include="New\Map\Map.h" />
-    <ClInclude Include="New\Player\Player.h" />
-    <ClInclude Include="New\Scene\scene1.h" />
     <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Sprite2D.h" />
     <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Sphere.h" />
     <ClInclude Include="kEngine\Sound\soundUnit.h" />
@@ -368,10 +353,6 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClInclude Include="kEngine\drawEngine\ResourceManager\VertexResource.h" />
     <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Triangle.h" />
     <ClInclude Include="kEngine\tool\TimeManager\TimeManager.h" />
-    <ClInclude Include="New\ShadowArea\ShadowArea.h" />
-    <ClInclude Include="New\Utility\Rect.h" />
-    <ClInclude Include="New\Utility\ShadowDirection.h" />
-    <ClInclude Include="New\Utility\Vector2Int.h" />
     <ClInclude Include="kEngine\tool\StageManager\Stage.h" />
     <ClInclude Include="kEngine\drawEngine\DrawData\SpriteData.h" />
     <ClInclude Include="kEngine\drawEngine\ResourceManager\ObjectResource\Particle.h" />

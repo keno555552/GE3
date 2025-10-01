@@ -273,30 +273,6 @@
     <ClCompile Include="kEngine\tool\TimeManager\TimeManager.cpp">
       <Filter>ソース ファイル\kEngine\tool</Filter>
     </ClCompile>
-    <ClCompile Include="New\Actor\Actor.cpp">
-      <Filter>ソース ファイル\New</Filter>
-    </ClCompile>
-    <ClCompile Include="New\Collision\Collision.cpp">
-      <Filter>ソース ファイル\New</Filter>
-    </ClCompile>
-    <ClCompile Include="New\CSVLoader\CsvLoader.cpp">
-      <Filter>ソース ファイル\New</Filter>
-    </ClCompile>
-    <ClCompile Include="New\FallingBlock\FallingBlock.cpp">
-      <Filter>ソース ファイル\New</Filter>
-    </ClCompile>
-    <ClCompile Include="New\Map\Map.cpp">
-      <Filter>ソース ファイル\New</Filter>
-    </ClCompile>
-    <ClCompile Include="New\Player\Player.cpp">
-      <Filter>ソース ファイル\New</Filter>
-    </ClCompile>
-    <ClCompile Include="New\Scene\scene1.cpp">
-      <Filter>ソース ファイル\New</Filter>
-    </ClCompile>
-    <ClCompile Include="New\ShadowArea\ShadowArea.cpp">
-      <Filter>ソース ファイル\New</Filter>
-    </ClCompile>
     <ClCompile Include="kEngine\kEngine.cpp">
       <Filter>ソース ファイル\kEngine</Filter>
     </ClCompile>
@@ -457,39 +433,6 @@
     </ClInclude>
     <ClInclude Include="kEngine\tool\TimeManager\TimeManager.h">
       <Filter>ヘッダー ファイル\kEngine\tool</Filter>
-    </ClInclude>
-    <ClInclude Include="New\Actor\Actor.h">
-      <Filter>ヘッダー ファイル\New</Filter>
-    </ClInclude>
-    <ClInclude Include="New\Collision\Collision.h">
-      <Filter>ヘッダー ファイル\New</Filter>
-    </ClInclude>
-    <ClInclude Include="New\CSVLoader\CsvLoader.h">
-      <Filter>ヘッダー ファイル\New</Filter>
-    </ClInclude>
-    <ClInclude Include="New\FallingBlock\FallingBlock.h">
-      <Filter>ヘッダー ファイル\New</Filter>
-    </ClInclude>
-    <ClInclude Include="New\Map\Map.h">
-      <Filter>ヘッダー ファイル\New</Filter>
-    </ClInclude>
-    <ClInclude Include="New\Player\Player.h">
-      <Filter>ヘッダー ファイル\New</Filter>
-    </ClInclude>
-    <ClInclude Include="New\Scene\scene1.h">
-      <Filter>ヘッダー ファイル\New</Filter>
-    </ClInclude>
-    <ClInclude Include="New\ShadowArea\ShadowArea.h">
-      <Filter>ヘッダー ファイル\New</Filter>
-    </ClInclude>
-    <ClInclude Include="New\Utility\ShadowDirection.h">
-      <Filter>ヘッダー ファイル\New</Filter>
-    </ClInclude>
-    <ClInclude Include="New\Utility\Rect.h">
-      <Filter>ヘッダー ファイル\New</Filter>
-    </ClInclude>
-    <ClInclude Include="New\Utility\Vector2Int.h">
-      <Filter>ヘッダー ファイル\New</Filter>
     </ClInclude>
     <ClInclude Include="kEngine\kEngine.h">
       <Filter>ヘッダー ファイル\kEngine</Filter>
