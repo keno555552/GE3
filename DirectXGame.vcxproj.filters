@@ -264,10 +264,10 @@
     <ClCompile Include="kEngine\tool\StageManager\SceneTester.cpp">
       <Filter>ソース ファイル\kEngine\tool\StageManager</Filter>
     </ClCompile>
-    <ClCompile Include="kEngine\tool\StageManager\StageTestForGE.cpp">
+    <ClCompile Include="resources\stages\StageTestForGE.cpp">
       <Filter>ソース ファイル\kEngine\tool\StageManager</Filter>
     </ClCompile>
-    <ClCompile Include="kEngine\tool\StageManager\Stage.cpp">
+    <ClCompile Include="resources\stages\Stage.cpp">
       <Filter>ソース ファイル\kEngine\tool\StageManager</Filter>
     </ClCompile>
     <ClCompile Include="kEngine\tool\TimeManager\TimeManager.cpp">
@@ -416,10 +416,10 @@
     <ClInclude Include="kEngine\tool\DebugCamera\DebugCamera.h">
       <Filter>ヘッダー ファイル\kEngine\tool</Filter>
     </ClInclude>
-    <ClInclude Include="kEngine\tool\StageManager\Stage.h">
+    <ClInclude Include="resources\stages\Stage.h">
       <Filter>ヘッダー ファイル\kEngine\tool\StageManager</Filter>
     </ClInclude>
-    <ClInclude Include="kEngine\tool\StageManager\StageTestForGE.h">
+    <ClInclude Include="resources\stages\StageTestForGE.h">
       <Filter>ヘッダー ファイル\kEngine\tool\StageManager</Filter>
     </ClInclude>
     <ClInclude Include="kEngine\tool\StageManager\SceneTester.h">
