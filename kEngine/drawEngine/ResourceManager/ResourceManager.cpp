@@ -62,6 +62,7 @@ ResourceManager::~ResourceManager() {
 			}
 		}
 		vertexResourceModelGroup_.clear();
+
 	}
 
 
