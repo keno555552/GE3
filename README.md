@@ -23,4 +23,4 @@
 |:---|:---|:---|:---|
 |Debug|他のプロジェクト|[![DebugBuild](https://github.com/keno555552/kEngine/actions/workflows/DebugBuild.yml/badge.svg?branch=AL3_02_master)](https://github.com/keno555552/kEngine/actions/workflows/DebugBuild.yml)||
 |Release|他のプロジェクト|[![ReleaseBuild](https://github.com/keno555552/kEngine/actions/workflows/ReleaseBuild.yml/badge.svg?branch=AL3_02_master)](https://github.com/keno555552/kEngine/actions/workflows/ReleaseBuild.yml)||
-|完成確認|完成||
+|完成確認|完成|未完成||
