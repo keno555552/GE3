@@ -6,4 +6,11 @@ struct Vector4
 	float y;
 	float z;
 	float w;
+
+	Vector4 operator+(const Vector4& target);
+	Vector4 operator-(const Vector4& target);
+
+	bool operator!=(const Vector4& target);
+	bool operator==(const Vector4& target);
+
 };

@@ -13,6 +13,7 @@
 #pragma comment(lib,"dxcompiler.lib")
 
 #include "DircetXBase.h"
+#include "config.h"
 
 class PSO{
 public:
@@ -22,10 +23,13 @@ public:
 
 	ID3D12RootSignature* getRootSignature() { return rootSignature_; }
 
-	ID3D12RootSignature* createRootSignature();
+	ID3D12RootSignature* createRootSignature(bool isParticle);
 
 	ID3D12PipelineState* createPSO(IDxcUtils* dxcUtils, IDxcCompiler3* dxcCompiler, IDxcIncludeHandler* includeHandler, 
-								   const char* kClientTitle, int kClientWidth, int kClientHeight, LightModelType lightMadelType);
+								   LightModelType lightMadelType);
+
+	ID3D12PipelineState* createPSO_Particle(IDxcUtils* dxcUtils, IDxcCompiler3* dxcCompiler, IDxcIncludeHandler* includeHandler, 
+											LightModelType lightMadelType);
 
 private:
 	//D3D12_ROOT_SIGNATURE_DESC descriptionRootSignature{};

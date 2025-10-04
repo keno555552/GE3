@@ -35,7 +35,9 @@ private:
 		MULTIMATERIAL,
 		CHARATER,
 		NEEDLE,
-		SKYDOME
+		SKYDOME,
+		TILE,
+		PRATICLE,
 	};
 
 	enum class ModelType {
@@ -47,7 +49,9 @@ private:
 		MULTIMATERIAL,
 		CHARATER,
 		NEEDLE,
-		SKYDOME
+		SKYDOME,
+		TILE,
+		PRATICLE,
 	};
 
 	///Transform変数を作る

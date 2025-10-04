@@ -49,13 +49,15 @@ SceneTester::SceneTester(kEngine* system) {
 		objectGroup.push_back(object);
 	}
 
-	//for (int i = 0; i < 200; i++) 
+	for (int i = 0; i < 10; i++) 
 	{
 		Object* object = new Object;
 		MaterialConfig materialConfig;
 		intMaterialConfig(&materialConfig);
 		object->materialConfig.push_back(materialConfig);
-		object->objectType = SPRITE;
+		object->objectType = TILE;
+		object->transform.translate = { i * 0.1f,i * 0.1f, 0.0f };
+		object->transformationMatrix = debugCamera_->transformationMatrixTransform(object->transform);
 		objectGroup.push_back(object);
 	}
 

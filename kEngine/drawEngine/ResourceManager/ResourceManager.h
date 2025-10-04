@@ -3,6 +3,7 @@
 #include "VertexResource.h"
 #include "VertexData.h"
 #include "Material.h"
+#include "MaterialConfig.h"
 #include "VertexIndex.h"
 
 class ResourceManager
@@ -15,21 +16,23 @@ public:
 		Vector4 uvOffset;           
 	};
 
+
+#pragma region Instance管理
 public:
-	void AddSpriteInstance();
-	void ResmoveSpriteInstance();
-	void UpdateTileInstance();
+	void AddSpriteInstance(Vector2 pos, MaterialConfig material);
+	//void ResmoveSpriteInstance();
+	//void UpdateTileInstance();
 	void AddModelInstance();
-	void ResmoveModelInstance();
-	void UpdateModelInstance();
+	//void ResmoveModelInstance();
+	//void UpdateModelInstance();
 
 public:
 	struct SpriteInstance {
 		Vector2 position;
 		Vector2 scale;
-		int tileType;
-		Vector4 uvOffset;
+		int materialConfigIndex;
 		int layer;
+		bool isDraw;
 	};
 
 	struct ModelInstance {
@@ -40,9 +43,12 @@ public:
 		int layer;
 	};
 
-private:
-	std::vector<SpriteInstance> spriteList;
-	std::vector<ModelInstance> modelList;
+public:
+	std::vector<MaterialConfig*> materialConfigList_;
+	std::vector<SpriteInstance*> spriteList_;
+	std::vector<ModelInstance*> modelList_;
+
+#pragma endregion
 
 public:
 	/// 一回だけ作成するResource

@@ -51,7 +51,7 @@ void DrawEngine::Initialize
 	///
 	pso_->Initialize(directXDriver_);
 	for (int i = 0; i < (int)LightModelType::NumLightModels; i++) {
-		ID3D12PipelineState* graphicsPipelineState_ = pso_->createPSO(dxcUtils, dxcCompiler, includeHandler, kClientTitle, kClientWidth, kClientHeight, (LightModelType)i);
+		ID3D12PipelineState* graphicsPipelineState_ = pso_->createPSO(dxcUtils, dxcCompiler, includeHandler, (LightModelType)i);
 		PSO_.push_back(graphicsPipelineState_);
 	}
 	rootSignature_ = pso_->getRootSignature();
@@ -72,7 +72,7 @@ void DrawEngine::PreDraw() {
 	directXDriver_->GetCommandList()->RSSetScissorRects(1, &scissorRect);  // Scissorを設定
 	/// RootSignatureを設定。PSOに設定しているけど別途設定が必要
 	directXDriver_->GetCommandList()->SetGraphicsRootSignature(rootSignature_);
-	if(currentLightModel_ == defaultLightModel_){
+	if (currentLightModel_ == defaultLightModel_) {
 		directXDriver_->GetCommandList()->SetPipelineState(PSO_[(int)defaultLightModel_]);  // PSOを設定
 		currentLightModel_ = defaultLightModel_;
 	} else {
@@ -119,17 +119,124 @@ void DrawEngine::DrawTriangle(TransformationMatrix* wvpData, MaterialConfig mate
 }
 
 void DrawEngine::CollectSprite(Vector2 pos, MaterialConfig material) {
-
-
-
-
+	resourceManager_->AddSpriteInstance(pos, material);
 }
 
-void DrawEngine::DrawSprite(Vector2 pos, MaterialConfig material) {
+void DrawEngine::DrawSprite() {
 
+#pragma region 自分で作った
+	//if (!resourceManager_->spriteList_.empty()) {
+	//	int beforeMaterialIndex = -1;
+	//
+	//	/// SetPSO
+	//	for (auto ptr : resourceManager_->spriteList_) {
+	//		if (ptr->isDraw)continue;
+	//
+	//		/// SetPSO
+	//		directXDriver_->GetCommandList()->SetPipelineState(PSO_[(int)resourceManager_->materialConfigList_[ptr->materialConfigIndex]->lightModelType]);
+	//		currentLightModel_ = resourceManager_->materialConfigList_[ptr->materialConfigIndex]->lightModelType;
+	//		beforeMaterialIndex = ptr->materialConfigIndex;
+	//
+	//		for (auto ptr2 : resourceManager_->spriteList_) {
+	//			if (ptr2->isDraw)continue;
+	//			if (resourceManager_->materialConfigList_[ptr->materialConfigIndex]->lightModelType != resourceManager_->materialConfigList_[ptr2->materialConfigIndex]->lightModelType)continue;
+	//
+	//			MaterialConfig* nowMaterial = resourceManager_->materialConfigList_[ptr2->materialConfigIndex];
+	//			/// SetMaterial
+	//			SetMaterial(resourceManager_->materialResourceSprite_->GetResource(), nowMaterial->uvTransformMatrix, nowMaterial->textureColor, false);
+	//			directXDriver_->GetCommandList()->SetGraphicsRootConstantBufferView(0, resourceManager_->materialResourceSprite_->GetResource()->GetGPUVirtualAddress());
+	//
+	//			/// textrue設定
+	//			int materialHandle = readCommonTextureHandle(nowMaterial->textureHandle);
+	//			textureSrvHandleGPU_ = directXDriver_->GetGPUDescriptorHandle(directXDriver_->GetSrvDescriptorHeap(), directXDriver_->GetDesriptorSizeSRV(), materialHandle);
+	//			directXDriver_->GetCommandList()->SetGraphicsRootDescriptorTable(2, textureSrvHandleGPU_);
+	//
+	//			/// Spriteの描画。変更が必要なものだけ変更する.
+	//			D3D12_VERTEX_BUFFER_VIEW VertexBufferView = resourceManager_->vertexResourceSpriteGroup_[0]->GetVertexBufferView();
+	//			directXDriver_->GetCommandList()->IASetVertexBuffers(0, 1, &VertexBufferView);
+	//			/// IBVを設定
+	//			D3D12_INDEX_BUFFER_VIEW IndexBufferView = resourceManager_->vertexResourceSpriteGroup_[0]->GetIndexBufferView();
+	//			directXDriver_->GetCommandList()->IASetIndexBuffer(&IndexBufferView);
+	//
+	//			for (auto ptr3 : resourceManager_->spriteList_) {
+	//				if (ptr3->isDraw)continue;
+	//				if (ptr3->materialConfigIndex != beforeMaterialIndex)continue;
+	//
+	//				/// wvp用のCBufferの場所を設定
+	//				resourceManager_->vertexResourceSpriteGroup_[0]->SetWVPResource_(directXDriver_->GetDriver(), ptr3->position);
+	//				/// TransformationMatrixCBufferの場所を設定
+	//				directXDriver_->GetCommandList()->SetGraphicsRootConstantBufferView(1, resourceManager_->vertexResourceSpriteGroup_[0]->GetWVPResource_()->GetGPUVirtualAddress());
+	//				/// 描画! (DrawCall)
+	//
+	//				directXDriver_->GetCommandList()->SetGraphicsRootConstantBufferView(3, resourceManager_->lightingResource_->GetGPUVirtualAddress());
+	//				directXDriver_->GetCommandList()->DrawIndexedInstanced(12, 1, 0, 0, 0);
+	//				ptr3->isDraw = true;
+	//			}
+	//		}
+	//
+	//	}
+	//}
+#pragma endregion
 
+	struct MaterialStateCache {
+		int materialIndex = -1;
+		int textureHandle = -1;
+		LightModelType lightModel = LightModelType::HalfLambert;
+	};
 
+	MaterialStateCache lastMaterialState_;
 
+	std::unordered_map<int, std::vector<ResourceManager::SpriteInstance*>> groupedSprites;
+
+	for (auto ptr : resourceManager_->spriteList_) {
+		if (!ptr->isDraw) {
+			groupedSprites[ptr->materialConfigIndex].push_back(ptr);
+		}
+	}
+
+	for (auto& [materialIndex, group] : groupedSprites) {
+		MaterialConfig* material = resourceManager_->materialConfigList_[materialIndex];
+
+		bool needSetMaterial =
+			materialIndex != lastMaterialState_.materialIndex ||
+			material->textureHandle != lastMaterialState_.textureHandle ||
+			material->lightModelType != lastMaterialState_.lightModel;
+
+		if (needSetMaterial) {
+			// Set PSO
+			directXDriver_->GetCommandList()->SetPipelineState(PSO_[(int)material->lightModelType]);
+			currentLightModel_ = material->lightModelType;
+
+			// Set Material
+			SetMaterial(resourceManager_->materialResourceSprite_->GetResource(), material->uvTransformMatrix, material->textureColor, false);
+			directXDriver_->GetCommandList()->SetGraphicsRootConstantBufferView(0, resourceManager_->materialResourceSprite_->GetResource()->GetGPUVirtualAddress());
+
+			// Set Texture
+			int materialHandle = readCommonTextureHandle(material->textureHandle);
+			textureSrvHandleGPU_ = directXDriver_->GetGPUDescriptorHandle(directXDriver_->GetSrvDescriptorHeap(), directXDriver_->GetDesriptorSizeSRV(), materialHandle);
+			directXDriver_->GetCommandList()->SetGraphicsRootDescriptorTable(2, textureSrvHandleGPU_);
+
+			// Update cache
+			lastMaterialState_.materialIndex = materialIndex;
+			lastMaterialState_.textureHandle = material->textureHandle;
+			lastMaterialState_.lightModel = material->lightModelType;
+		}
+
+		// Set VB/IB
+		D3D12_VERTEX_BUFFER_VIEW VertexBufferView = resourceManager_->vertexResourceSpriteGroup_[0]->GetVertexBufferView();
+		directXDriver_->GetCommandList()->IASetVertexBuffers(0, 1, &VertexBufferView);
+		D3D12_INDEX_BUFFER_VIEW IndexBufferView = resourceManager_->vertexResourceSpriteGroup_[0]->GetIndexBufferView();
+		directXDriver_->GetCommandList()->IASetIndexBuffer(&IndexBufferView);
+
+		// Draw all sprites with same material
+		for (auto ptr : group) {
+			resourceManager_->vertexResourceSpriteGroup_[0]->SetWVPResource_(directXDriver_->GetDriver(), ptr->position);
+			directXDriver_->GetCommandList()->SetGraphicsRootConstantBufferView(1, resourceManager_->vertexResourceSpriteGroup_[0]->GetWVPResource_()->GetGPUVirtualAddress());
+			directXDriver_->GetCommandList()->SetGraphicsRootConstantBufferView(3, resourceManager_->lightingResource_->GetGPUVirtualAddress());
+			directXDriver_->GetCommandList()->DrawIndexedInstanced(12, 1, 0, 0, 0);
+			ptr->isDraw = true;
+		}
+	}
 }
 
 void DrawEngine::DrawSpriteDirect(Vector2 pos, MaterialConfig material) {
@@ -172,7 +279,7 @@ void DrawEngine::DrawSpriteDirect(Vector2 pos, MaterialConfig material, Vector2 
 
 	int vertexHandle = -1;
 	if (!resourceManager_->vertexResourceSpriteGroup_.empty()) {
-		for (int i = 0; i < resourceManager_->vertexResourceSpriteGroup_.size();i++) {
+		for (int i = 0; i < resourceManager_->vertexResourceSpriteGroup_.size(); i++) {
 			if (resourceManager_->vertexResourceSpriteGroup_[i]->CheckSize(LTpos, LBpos, RTpos, RBpos, TsizeX, TsizeY, TCLTPos, TCRBPos)) {
 				resourceManager_->vertexResourceSpriteGroup_[i]->SetKeep(true);
 				vertexHandle = i;
@@ -213,6 +320,79 @@ void DrawEngine::DrawSpriteDirect(Vector2 pos, MaterialConfig material, Vector2 
 	/// 描画! (DrawCall)
 	directXDriver_->GetCommandList()->SetGraphicsRootConstantBufferView(3, resourceManager_->lightingResource_->GetGPUVirtualAddress());
 	directXDriver_->GetCommandList()->DrawIndexedInstanced(12, 1, 0, 0, 0);
+}
+
+void DrawEngine::CollectTile(Vector2* pos, MaterialConfig material) {
+
+
+}
+
+void DrawEngine::DrawTile(Vector2 pos, MaterialConfig material) {
+	struct MaterialStateCache {
+		int materialIndex = -1;
+		int textureHandle = -1;
+		LightModelType lightModel = LightModelType::HalfLambert;
+	};
+
+	MaterialStateCache lastMaterialState_;
+
+	std::unordered_map<int, std::vector<ResourceManager::SpriteInstance*>> groupedSprites;
+
+	for (auto ptr : resourceManager_->spriteList_) {
+		if (!ptr->isDraw) {
+			groupedSprites[ptr->materialConfigIndex].push_back(ptr);
+		}
+	}
+
+	for (auto& [materialIndex, group] : groupedSprites) {
+		MaterialConfig* material = resourceManager_->materialConfigList_[materialIndex];
+
+		bool needSetMaterial =
+			materialIndex != lastMaterialState_.materialIndex ||
+			material->textureHandle != lastMaterialState_.textureHandle ||
+			material->lightModelType != lastMaterialState_.lightModel;
+
+		if (needSetMaterial) {
+			// Set PSO
+			directXDriver_->GetCommandList()->SetPipelineState(PSO_[(int)material->lightModelType]);
+			currentLightModel_ = material->lightModelType;
+
+			// Set Material
+			SetMaterial(resourceManager_->materialResourceSprite_->GetResource(), material->uvTransformMatrix, material->textureColor, false);
+			directXDriver_->GetCommandList()->SetGraphicsRootConstantBufferView(0, resourceManager_->materialResourceSprite_->GetResource()->GetGPUVirtualAddress());
+
+			// Set Texture
+			int materialHandle = readCommonTextureHandle(material->textureHandle);
+			textureSrvHandleGPU_ = directXDriver_->GetGPUDescriptorHandle(directXDriver_->GetSrvDescriptorHeap(), directXDriver_->GetDesriptorSizeSRV(), materialHandle);
+			directXDriver_->GetCommandList()->SetGraphicsRootDescriptorTable(2, textureSrvHandleGPU_);
+
+			// Update cache
+			lastMaterialState_.materialIndex = materialIndex;
+			lastMaterialState_.textureHandle = material->textureHandle;
+			lastMaterialState_.lightModel = material->lightModelType;
+		}
+
+		// Set VB/IB
+		D3D12_VERTEX_BUFFER_VIEW VertexBufferView = resourceManager_->vertexResourceSpriteGroup_[0]->GetVertexBufferView();
+		directXDriver_->GetCommandList()->IASetVertexBuffers(0, 1, &VertexBufferView);
+		D3D12_INDEX_BUFFER_VIEW IndexBufferView = resourceManager_->vertexResourceSpriteGroup_[0]->GetIndexBufferView();
+		directXDriver_->GetCommandList()->IASetIndexBuffer(&IndexBufferView);
+
+		// Draw all sprites with same material
+		for (auto ptr : group) {
+			resourceManager_->vertexResourceSpriteGroup_[0]->SetWVPResource_(directXDriver_->GetDriver(), ptr->position);
+			directXDriver_->GetCommandList()->SetGraphicsRootConstantBufferView(1, resourceManager_->vertexResourceSpriteGroup_[0]->GetWVPResource_()->GetGPUVirtualAddress());
+			directXDriver_->GetCommandList()->SetGraphicsRootConstantBufferView(3, resourceManager_->lightingResource_->GetGPUVirtualAddress());
+			directXDriver_->GetCommandList()->DrawIndexedInstanced(12, 1, 0, 0, 0);
+			ptr->isDraw = true;
+		}
+	}
+
+
+
+
+
+
 }
 
 void DrawEngine::DrawCube(TransformationMatrix* wvpData, MaterialConfig material) {
@@ -372,7 +552,7 @@ int DrawEngine::SetModel(std::string Path) {
 	ModelGroup* modelGroup = new ModelGroup;
 	modelGroup->SetModelObj(Path);
 
-	if(!resourceManager_->vertexResourceModelGroup_.empty()){
+	if (!resourceManager_->vertexResourceModelGroup_.empty()) {
 		for (int i = 0; i < resourceManager_->vertexResourceModelGroup_.size(); i++) {
 			std::string checkPath = resourceManager_->vertexResourceModelGroup_[i]->GetDirectoryPath();
 			std::string checkName = resourceManager_->vertexResourceModelGroup_[i]->GetObjName_();
@@ -418,7 +598,7 @@ int DrawEngine::LoadTexture(const std::string& filePath) {
 	DirectX::ScratchImage mipImage = LoadTextrueLow(filePath);
 	if (!resourceManager_->commonTextureFilePath_.empty()) {
 		for (int i = 0; i < resourceManager_->commonTextureFilePath_.size(); i++) {
-			if(resourceManager_->commonTextureFilePath_[i] == filePath){
+			if (resourceManager_->commonTextureFilePath_[i] == filePath) {
 				return i;
 			}
 		}
@@ -447,7 +627,16 @@ int DrawEngine::LoadModelTexture(const std::string& filePath) {
 	return handle;
 }
 
+void DrawEngine::CompoDraw() {
+
+	/// Sprite描画
+	DrawSprite();
+
+}
+
 void DrawEngine::EndDraw() {
+
+
 	/// 各種のリソースを解放
 	resourceManager_->ClearTurnResource();
 }

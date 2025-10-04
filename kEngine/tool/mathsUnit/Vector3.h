@@ -14,6 +14,9 @@ typedef struct Vector3 {
 	Vector3 operator*(const float& target);
 	friend Vector3 operator*(float scalar, const Vector3& vec);
 	Vector3 operator/(const float& target);
+	bool operator!=(const Vector3& target);
+	bool operator==(const Vector3& target);
+
 
 	///int
 	Vector3 operator*(const int& target);

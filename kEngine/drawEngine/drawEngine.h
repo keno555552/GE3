@@ -35,9 +35,13 @@ public:
 	void DrawTriangle(TransformationMatrix* wvpData, MaterialConfig material);
 	/// 2D図形関連
 	void CollectSprite(Vector2 pos, MaterialConfig material);
-	void DrawSprite(Vector2 pos, MaterialConfig material);
+	void DrawSprite();
 	void DrawSpriteDirect(Vector2 pos, MaterialConfig material);
 	void DrawSpriteDirect(Vector2 pos, MaterialConfig material, Vector2 LTpos, Vector2 LBpos, Vector2 RTpos, Vector2 RBpos, float TsizeX, float TsizeY, Vector2 TCLTPos, Vector2 TCRBPos);
+
+	void CollectTile(Vector2* pos, MaterialConfig material);
+	void DrawTile(Vector2 pos, MaterialConfig material);
+	
 	/// 立方体関連
 	void DrawCube(TransformationMatrix* wvpData, MaterialConfig material);
 	/// 球体関連
@@ -54,6 +58,8 @@ public:
 
 	int LoadTexture(const std::string& filePath);
 	int LoadModelTexture(const std::string& filePath);
+
+	void CompoDraw();
 
 	void EndDraw();
 

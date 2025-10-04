@@ -69,6 +69,33 @@ ResourceManager::~ResourceManager() {
 	delete vertexResourceSphere_;
 }
 
+void ResourceManager::AddSpriteInstance(Vector2 pos, MaterialConfig material) {
+	SpriteInstance* instance = new SpriteInstance;
+	instance->position = pos;
+	instance->scale = { 1.0f,1.0f };     /// まだ使ってない
+	instance->layer = 0;					/// まだ使ってない
+	instance->isDraw = false;
+
+	auto it = std::find_if(materialConfigList_.begin(),
+		materialConfigList_.end(),
+		[&](MaterialConfig* ptr) {return *ptr == material; });
+
+	if (it != materialConfigList_.end()) {
+		instance->materialConfigIndex = std::distance(materialConfigList_.begin(), it);
+	} else {
+		MaterialConfig* newMaterial = new MaterialConfig(material);
+		materialConfigList_.push_back(newMaterial);
+		instance->materialConfigIndex = materialConfigList_.size() - 1;
+	}
+
+	spriteList_.push_back(instance);
+}
+
+void ResourceManager::AddModelInstance() {
+
+
+}
+
 void ResourceManager::CreateTurnResource() {
 	lightingResource_ = CreateResource(Bdevice_, sizeof(DirectionalLight));
 }
@@ -123,6 +150,20 @@ void ResourceManager::ClearTurnResource() {
 				modelGroup->GetModel(model)->ClearWVPResource();
 			}
 		}
+	}
+	
+	if (!materialConfigList_.empty()) {
+		for (auto ptr : materialConfigList_) {
+			delete ptr;
+		}
+		materialConfigList_.clear();
+	}
+	
+	if (!spriteList_.empty()) {
+		for (auto ptr : spriteList_) {
+			delete ptr;
+		}
+		spriteList_.clear();
 	}
 
 }

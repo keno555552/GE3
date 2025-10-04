@@ -21,9 +21,9 @@ void PSO::Initialize(DirectXBase* directXDriver)
 }
 
 ID3D12PipelineState* PSO::createPSO(IDxcUtils* dxcUtils, IDxcCompiler3* dxcCompiler, IDxcIncludeHandler* includeHandler,
-                                    const char* kClientTitle, int kClientWidth, int kClientHeight, LightModelType lightModelType)
+                                    LightModelType lightModelType)
 {
-    if(!rootSignature_)createRootSignature();
+    if(!rootSignature_)createRootSignature(false);
     createInputLayout();
     SetBlendState();
     SetRasterizerState();
@@ -34,7 +34,19 @@ ID3D12PipelineState* PSO::createPSO(IDxcUtils* dxcUtils, IDxcCompiler3* dxcCompi
     return graphicsPipelineState_;
 }
 
-ID3D12RootSignature* PSO::createRootSignature()
+ID3D12PipelineState* PSO::createPSO_Particle(IDxcUtils* dxcUtils, IDxcCompiler3* dxcCompiler, IDxcIncludeHandler* includeHandler, LightModelType lightMadelType) {
+    if (!rootSignature_)createRootSignature(true);
+    createInputLayout();
+    SetBlendState();
+    SetRasterizerState();
+    ShaderCompile(dxcUtils, dxcCompiler, includeHandler, lightMadelType);
+    SetDepthStencilState();
+
+    SetGraphicsPipelineState();
+    return graphicsPipelineState_;
+}
+
+ID3D12RootSignature* PSO::createRootSignature(bool isParticle)
 {
     ///RootSignature作成
     D3D12_ROOT_SIGNATURE_DESC descriptionRootSignature{};
@@ -47,12 +59,6 @@ ID3D12RootSignature* PSO::createRootSignature()
 	descriptorRange[0].RangeType = D3D12_DESCRIPTOR_RANGE_TYPE_SRV; // SRVを使う
 	descriptorRange[0].OffsetInDescriptorsFromTableStart = D3D12_DESCRIPTOR_RANGE_OFFSET_APPEND; // 連続している
 
-    ///// Sprite用ロードを作る
-    //D3D12_DESCRIPTOR_RANGE descriptorRangeForInstancing[1] = {};
-    //descriptorRangeForInstancing[0].BaseShaderRegister = 0; // 0からはじまる
-	//descriptorRangeForInstancing[0].NumDescriptors = 1; // 数は1つ
-	//descriptorRangeForInstancing[0].RangeType = D3D12_DESCRIPTOR_RANGE_TYPE_SRV; // SRVを使う
-    //descriptorRangeForInstancing[0].OffsetInDescriptorsFromTableStart = D3D12_DESCRIPTOR_RANGE_OFFSET_APPEND;
 
 
     D3D12_STATIC_SAMPLER_DESC staticSampler[1]{};
@@ -76,10 +82,6 @@ ID3D12RootSignature* PSO::createRootSignature()
     rootParameters[1].ParameterType = D3D12_ROOT_PARAMETER_TYPE_CBV;                            /// もう一つを足す
     rootParameters[1].ShaderVisibility = D3D12_SHADER_VISIBILITY_VERTEX;                        /// 
     rootParameters[1].Descriptor.ShaderRegister = 0;                                            /// 
-	//rootParameters[1].ParameterType = D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE;                   /// DescirptorTableを使う
-	//rootParameters[1].ShaderVisibility = D3D12_SHADER_VISIBILITY_VERTEX;                            /// VertexShaderで使う
-	//rootParameters[1].DescriptorTable.pDescriptorRanges = descriptorRangeForInstancing;             /// Tableの中身の配列を指定
-	//rootParameters[1].DescriptorTable.NumDescriptorRanges = _countof(descriptorRangeForInstancing); /// Tableで利用する数
 
     rootParameters[2].ParameterType = D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE;                   /// DescriptorTableを使う
 	rootParameters[2].ShaderVisibility = D3D12_SHADER_VISIBILITY_PIXEL;                             /// PixelShaderで使う
@@ -89,6 +91,22 @@ ID3D12RootSignature* PSO::createRootSignature()
     rootParameters[3].ParameterType = D3D12_ROOT_PARAMETER_TYPE_CBV;                                /// CBV を使う
 	rootParameters[3].ShaderVisibility = D3D12_SHADER_VISIBILITY_PIXEL;                             /// PixelShaderで使う
     rootParameters[3].Descriptor.ShaderRegister = 1;
+
+
+    if(isParticle){
+    /// Sprite用ロードを作る
+    D3D12_DESCRIPTOR_RANGE descriptorRangeForInstancing[1] = {};
+    descriptorRangeForInstancing[0].BaseShaderRegister = 0; // 0からはじまる
+	descriptorRangeForInstancing[0].NumDescriptors = 1; // 数は1つ
+	descriptorRangeForInstancing[0].RangeType = D3D12_DESCRIPTOR_RANGE_TYPE_SRV; // SRVを使う
+    descriptorRangeForInstancing[0].OffsetInDescriptorsFromTableStart = D3D12_DESCRIPTOR_RANGE_OFFSET_APPEND;
+	rootParameters[1].ParameterType = D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE;                   /// DescirptorTableを使う
+	rootParameters[1].ShaderVisibility = D3D12_SHADER_VISIBILITY_VERTEX;                            /// VertexShaderで使う
+	rootParameters[1].DescriptorTable.pDescriptorRanges = descriptorRangeForInstancing;             /// Tableの中身の配列を指定
+	rootParameters[1].DescriptorTable.NumDescriptorRanges = _countof(descriptorRangeForInstancing); /// Tableで利用する数
+    }
+
+
     descriptionRootSignature.pParameters = rootParameters;              // ルートパラメータ配列へのポインタ
     descriptionRootSignature.NumParameters = _countof(rootParameters);  // 配列の長さ
 
