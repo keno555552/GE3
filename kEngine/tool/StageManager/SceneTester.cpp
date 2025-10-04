@@ -164,6 +164,8 @@ void SceneTester::Update() {
 			objectGroup.erase(objectGroup.begin() + i);
 		}
 	}
+
+
 }
 
 void SceneTester::Draw() {

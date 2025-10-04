@@ -35,7 +35,9 @@ void DircetXCommen::StartFrame()
 	commandList->OMSetRenderTargets(1, &rtvHandles[backBufferIndex], false, &dsvHandle);
 	// 指定した色で画面全体をクリアする
 	//float clearColor[] = { 0.1f, 0.25f, 0.5f, 1.0f }; // 青っぽい色。RGBAの順
-	float clearColor[] = { 0.0f, 0.0f, 0.0f, 1.0f }; // 黒色。RGBAの順
+	//float clearColor[] = { 0.0f, 0.0f, 0.0f, 1.0f }; // 黒色。RGBAの順
+	//float clearColor[] = { 0.006f, 0.008f, 0.006f, 1.0f }; // 黒緑色。RGBAの順
+	float clearColor[] = { 0.5f, 0.5f, 0.5f, 1.0f }; // グレイ。RGBAの順
 	commandList->ClearDepthStencilView(dsvHandle, D3D12_CLEAR_FLAG_DEPTH, 1.0f, 0, 0, nullptr);
 	commandList->ClearRenderTargetView(rtvHandles[backBufferIndex], clearColor, 0, nullptr);
 

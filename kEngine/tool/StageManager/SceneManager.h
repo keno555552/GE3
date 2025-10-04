@@ -2,6 +2,7 @@
 #include "Scene.h"
 #include "SceneTester.h"
 #include "StageTestForGE.h"
+#include "SceneTestForPG.h"
 #include "MaterialConfig.h"
 #include "Stage.h"
 

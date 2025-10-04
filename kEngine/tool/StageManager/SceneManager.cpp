@@ -3,7 +3,7 @@
 
 SceneManager::SceneManager(kEngine* system) {
 	system_ = system;
-	sceneUsingHandle_ = SceneNum::TESTER;
+	sceneUsingHandle_ = SceneNum::STAGE;
 
 	intMaterialConfig(&materialConfig_);
 	materialConfig_.uvTransformMatrix = MakeAffineMatrix(materialConfig_.uvScale, materialConfig_.uvRotate, materialConfig_.uvTranslate);
@@ -35,7 +35,8 @@ void SceneManager::SceneChanger() {
 		case SceneNum::TITLE:
 			break;
 		case SceneNum::STAGE:
-			sceneUsing_ = new Stage(system_);
+			//sceneUsing_ = new Stage(system_);
+			sceneUsing_ = new SceneTestForPG(system_);
 			break;
 		case SceneNum::WIN:
 			break;
